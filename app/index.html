@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+</head>
+<body ng-app="app">
+<!--<div ng-controller="FirstCrtl">
+    <input type="text" ng-model="data.message">
+    <h2>{{data.message}}</h2>
+</div>
+
+<div ng-controller="SecondCrtl">
+    <input type="text" ng-model="data.message">
+    <h2>{{data.message|reverse}}</h2>
+</div>-->
+<div ng-controller="AvengersCrtl"class="large-6 medium-6 columns">
+
+    <input type="text" ng-model="searchText">
+    <table>
+        <tr ng-repeat="actors in avengers.cast|filter:searchText">
+            <td enter leave >{{actors.name}}</td>
+            <td enter leave>{{actors.character}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
